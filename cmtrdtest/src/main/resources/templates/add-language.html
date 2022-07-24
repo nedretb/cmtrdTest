@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<ul>
+    <li><a href="/">Home Page</a></li>
+    <li><a href="/hello">Hello</a></li>
+    <li><a href="/hello-rest">Hello Rest</a></li>
+    <li><a href="/add-language">Add language - message pairs</a></li>
+</ul>
+
+<form action="#" th:action="@{/add}" th:object="${hello}" method="post">
+    <p>Message: <input type="text" th:field="*{msg}" name="msg"/></p>
+    <p>Language: <input type="text" th:field="*{lang}" name="lang"/></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
